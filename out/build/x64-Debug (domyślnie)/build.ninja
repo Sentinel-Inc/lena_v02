@@ -78,6 +78,20 @@ build lena_v02\CMakeFiles\lena_v02.dir\lena_v02.cpp.obj: CXX_COMPILER__lena_v02_
   TARGET_COMPILE_PDB = lena_v02\CMakeFiles\lena_v02.dir\
   TARGET_PDB = lena_v02\lena_v02.pdb
 
+build lena_v02\CMakeFiles\lena_v02.dir\obraz.cpp.obj: CXX_COMPILER__lena_v02_Debug ..\..\..\lena_v02\obraz.cpp || cmake_object_order_depends_target_lena_v02
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  OBJECT_DIR = lena_v02\CMakeFiles\lena_v02.dir
+  OBJECT_FILE_DIR = lena_v02\CMakeFiles\lena_v02.dir
+  TARGET_COMPILE_PDB = lena_v02\CMakeFiles\lena_v02.dir\
+  TARGET_PDB = lena_v02\lena_v02.pdb
+
+build lena_v02\CMakeFiles\lena_v02.dir\pgm.cpp.obj: CXX_COMPILER__lena_v02_Debug ..\..\..\lena_v02\pgm.cpp || cmake_object_order_depends_target_lena_v02
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  OBJECT_DIR = lena_v02\CMakeFiles\lena_v02.dir
+  OBJECT_FILE_DIR = lena_v02\CMakeFiles\lena_v02.dir
+  TARGET_COMPILE_PDB = lena_v02\CMakeFiles\lena_v02.dir\
+  TARGET_PDB = lena_v02\lena_v02.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target lena_v02
@@ -86,7 +100,7 @@ build lena_v02\CMakeFiles\lena_v02.dir\lena_v02.cpp.obj: CXX_COMPILER__lena_v02_
 #############################################
 # Link the executable lena_v02\lena_v02.exe
 
-build lena_v02\lena_v02.exe: CXX_EXECUTABLE_LINKER__lena_v02_Debug lena_v02\CMakeFiles\lena_v02.dir\lena_v02.cpp.obj
+build lena_v02\lena_v02.exe: CXX_EXECUTABLE_LINKER__lena_v02_Debug lena_v02\CMakeFiles\lena_v02.dir\lena_v02.cpp.obj lena_v02\CMakeFiles\lena_v02.dir\obraz.cpp.obj lena_v02\CMakeFiles\lena_v02.dir\pgm.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
