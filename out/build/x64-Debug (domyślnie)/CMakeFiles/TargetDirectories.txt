@@ -1,0 +1,5 @@
+E:/repo/lena_v02/out/build/x64-Debug (domyślnie)/CMakeFiles/edit_cache.dir
+E:/repo/lena_v02/out/build/x64-Debug (domyślnie)/CMakeFiles/rebuild_cache.dir
+E:/repo/lena_v02/out/build/x64-Debug (domyślnie)/lena_v02/CMakeFiles/lena_v02.dir
+E:/repo/lena_v02/out/build/x64-Debug (domyślnie)/lena_v02/CMakeFiles/edit_cache.dir
+E:/repo/lena_v02/out/build/x64-Debug (domyślnie)/lena_v02/CMakeFiles/rebuild_cache.dir
