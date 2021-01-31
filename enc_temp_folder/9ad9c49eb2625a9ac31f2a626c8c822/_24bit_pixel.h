@@ -20,9 +20,6 @@ public:
 
 	_24bit_pixel(unsigned char r, unsigned char g, unsigned char b) :r(r), g(g), b(b) {};
 
-
-	// konstruktor kopiujacy i operator = sa tworzone za nas 
-
 	//_24bit_pixel(const _24bit_pixel&);
 
 	//_24bit_pixel& operator=(const _24bit_pixel&);
