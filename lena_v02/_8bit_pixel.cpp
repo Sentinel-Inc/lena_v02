@@ -1,4 +1,4 @@
-// plik zawiera definicje dla funkcji zadeklarowanych w _8bit_pixel.h
+// plik zawiera definicje dla funkcji zadeklarowanych w pixel_8bit.h
 //
 //
 //autor : Piotr Drabik							data: 14.12.2020
@@ -9,21 +9,21 @@
 
 #include "_8bit_pixel.h"
 
-_8bit_pixel::_8bit_pixel(unsigned char color)
+pixel_8bit::pixel_8bit(unsigned char color)
 {
 
 	this->color = color;
 
 }
 
-_8bit_pixel::_8bit_pixel(const _8bit_pixel& other)
+pixel_8bit::pixel_8bit(const pixel_8bit& other)
 {
 
 	this->color = other.color;
 
 }
 
-_8bit_pixel& _8bit_pixel::operator=(const _8bit_pixel& other)
+pixel_8bit& pixel_8bit::operator=(const pixel_8bit& other)
 {
 	if (this == &other) return *this; // na wypadek "a=a" 
 
@@ -34,19 +34,26 @@ _8bit_pixel& _8bit_pixel::operator=(const _8bit_pixel& other)
 
 }
 
-unsigned _8bit_pixel::gen_hash()
+unsigned pixel_8bit::gen_hash()
 {
 	return color;
 }
 
-unsigned char _8bit_pixel::get_color()
+unsigned pixel_8bit::gen_hash(const unsigned& max_color)
+{
+
+	//max_color doesn't change a thing
+	return color;
+}
+
+unsigned char pixel_8bit::get_color()
 { 
 	return color; 
 }
 
 
 
-void _8bit_pixel::set_color(unsigned char color)
+void pixel_8bit::set_color(unsigned char color)
 {
 	this->color = color;
 }

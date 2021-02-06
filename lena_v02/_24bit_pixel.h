@@ -12,20 +12,22 @@
 #ifndef _24BIT_PIXEL_H
 #define _24BIT_PIXEL_H
 #include <cmath>
-class _24bit_pixel
+
+#include<iostream>
+class pixel_24bit
 {
 public:
 
-	_24bit_pixel() :r(0), g(0), b(0) {};
+	pixel_24bit() :r(0), g(0), b(0) {};
 
-	_24bit_pixel(unsigned char r, unsigned char g, unsigned char b) :r(r), g(g), b(b) {};
+	pixel_24bit(unsigned char r, unsigned char g, unsigned char b) :r(r), g(g), b(b) {};
 
 
 	// konstruktor kopiujacy i operator = sa tworzone za nas 
 
-	//_24bit_pixel(const _24bit_pixel&);
+	//pixel_24bit(const pixel_24bit&);
 
-	//_24bit_pixel& operator=(const _24bit_pixel&);
+	//pixel_24bit& operator=(const pixel_24bit&);
 
 
 	// gen_hash przelicza kombinajê liczb r, g ,b i generuje pojedyñcz¹ wartoœæ unikaln¹ dla tej kombinacji
@@ -51,6 +53,11 @@ public:
 
 	void set_b(unsigned char b) { this->b = b; }
 
+	friend std::ostream& operator << (std::ostream& out, const pixel_24bit& color)
+	{
+		out << (int)color.r<<' '<< (int)color.g<<' '<< (int)color.b;
+		return out;
+	}
 
 
 protected:

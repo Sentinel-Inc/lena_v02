@@ -11,8 +11,9 @@
 #pragma once
 #ifndef _8BIT_PIXEL_H
 #define _8BIT_PIXEL_H
+#include <iostream>
 
-class _8bit_pixel
+class pixel_8bit
 {
 	//ze  wzglêdu na karakteruystykê klasy,
 	//konstruktor kopiuj¹cy wraz z destruktorem tworz¹ siê automatycznie
@@ -20,16 +21,17 @@ class _8bit_pixel
 
 public:
 
-	_8bit_pixel()color(0) {};
+	pixel_8bit() :color(0) {};
 
-	_8bit_pixel(unsigned char);
-	_8bit_pixel(const _8bit_pixel&);
+	pixel_8bit(unsigned char);
+	pixel_8bit(const pixel_8bit&);
 
-	_8bit_pixel& operator=(const _8bit_pixel&);
+	pixel_8bit& operator=(const pixel_8bit&);
 
 
 	// clor jest skalarem, wiêc moze slozyc jako hash samego siebie
 	unsigned gen_hash();
+	unsigned gen_hash(const unsigned& max_color);
 
 
 	unsigned char get_color();
@@ -38,9 +40,14 @@ public:
 	void set_color(unsigned char );
 
 
-
+	friend std::ostream& operator << (std::ostream& out, const pixel_8bit& color)
+	{
+		out << (int)color.color;
+		return out;
+	}
 
 protected:
+
 	unsigned char color;
 
 

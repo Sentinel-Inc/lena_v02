@@ -1,4 +1,4 @@
-// plik zawiera definicje dla funkcji zadeklarowanych w _24bit_pixel.h
+// plik zawiera definicje dla funkcji zadeklarowanych w pixel_24bit.h
 //
 //
 //autor : Piotr Drabik							data: 14.12.2020
@@ -10,8 +10,6 @@
 #include "_24bit_pixel.h"
 
 
-// max_collor okreœla maxymaln¹ wartoœæ koloru r lub g lub b
-
-unsigned _24bit_pixel::gen_hash(const unsigned& max_color) {
+unsigned pixel_24bit::gen_hash(const unsigned& max_color) {
 	return r * (max_color + 1) * (max_color + 1) + g * (max_color + 1) + b;
 };
