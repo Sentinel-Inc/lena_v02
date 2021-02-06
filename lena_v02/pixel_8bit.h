@@ -1,5 +1,5 @@
-// klasa opisuje kolory w przedziale 0 do 255 
-// 
+// klasa opisuje kolory 8bitowe
+// spotykane w plikach pgm
 //
 //autor : Piotr Drabik							data: 14.12.2020
 //logi  :
@@ -15,9 +15,6 @@
 
 class pixel_8bit
 {
-	//ze  wzglêdu na karakteruystykê klasy,
-	//konstruktor kopiuj¹cy wraz z destruktorem tworz¹ siê automatycznie
-	//z tego powodu celowo ich nie deklarujê 
 
 public:
 
@@ -29,9 +26,9 @@ public:
 	pixel_8bit& operator=(const pixel_8bit&);
 
 
-	// clor jest skalarem, wiêc moze slozyc jako hash samego siebie
+	// color jest skalarem, wiêc moze sluzyc jako hash samego siebie
 	unsigned gen_hash();
-	unsigned gen_hash(const unsigned& max_color);
+	unsigned gen_hash(const unsigned& max_color); 
 
 
 	unsigned char get_color();

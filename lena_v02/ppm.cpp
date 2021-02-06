@@ -87,7 +87,7 @@ format ppm::read_header(std::fstream& plik) {
 
 ppm::ppm(std::string file_path) {
 	read_data_from_file(file_path);
-	
+
 }
 void ppm::read_data_from_file(std::string file_path)
 {

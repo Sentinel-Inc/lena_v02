@@ -1,3 +1,14 @@
+// rozszerzenie funkcjonalnosci klasy obraz
+// pozwala na odczyt plików .ppm
+// informacje o poszczegulnych pixelach buduj¹cych wczytywany obraz
+// znajduj¹ siê w polu image 
+
+//autor : Piotr Drabik							data: 14.12.2020
+//logi  :
+//opis  :										data:
+//
+//
+
 
 #pragma once 
 #ifndef PPM_H
@@ -23,7 +34,7 @@ public:
 	size_t get_x() { return  x; }
 	size_t get_y() { return  y; }
 	size_t size() { return x*y; }
-	unsigned number_of_color_dimentions() { return 3; }
+	unsigned number_of_color_dimentions() { return 3; } // numer wymiarów potrzebnych do zapisania pojedyñczego koloru
 	unsigned get_max_color() { return max_color; }
 	unsigned get_pixel_hash(unsigned position) { return image[position].gen_hash(max_color); }
 

@@ -1,3 +1,13 @@
+// rozszerzenie funkcjonalnosci klasy obraz
+// pozwala na odczyt plików .pgm
+// informacje o poszczegulnych pixelach buduj¹cych wczytywany obraz
+// znajduj¹ siê w polu image 
+
+//autor : Piotr Drabik							data: 14.12.2020
+//logi  :
+//opis  :										data:
+//
+//
 
 #pragma once
 #ifndef PGM_H
