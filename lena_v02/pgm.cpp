@@ -32,6 +32,13 @@ pgm& pgm::operator=(const pgm& other)
 }
 
 
+
+
+void pgm::set_pixel(size_t x, size_t y, pixel_8bit new_color)
+{
+	image[x * this->x + y] = new_color;
+}
+
 unsigned char pgm::check_color(int color) {
 	if (color< 0 || color> max_color) {
 		throw invalid_file_format_pgm;
@@ -80,6 +87,15 @@ format pgm::read_header(std::fstream& plik) {
 
 pgm::pgm(std::string file_path) {
 
+	read_data_from_file(file_path);
+	
+}
+
+
+
+void pgm::read_data_from_file(std::string file_path)
+{
+
 	std::fstream plik;
 	plik.open(file_path, std::ios::in);
 	if (plik.good()) {
@@ -113,9 +129,9 @@ pgm::pgm(std::string file_path) {
 
 				unsigned char color = check_color(read_number(plik));
 
-				
+
 				image.push_back({ color });//dodaje pobrany kolor do tablicy
-				
+
 
 			}
 
@@ -132,4 +148,3 @@ pgm::pgm(std::string file_path) {
 		throw invalid_path_pgm;
 	}
 }
-

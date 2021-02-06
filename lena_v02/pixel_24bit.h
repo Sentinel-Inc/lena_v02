@@ -18,7 +18,7 @@ class pixel_24bit
 {
 public:
 
-	pixel_24bit() :r(0), g(0), b(0) {};
+	pixel_24bit() :r(NULL), g(NULL), b(NULL) {};
 
 	pixel_24bit(unsigned char r, unsigned char g, unsigned char b) :r(r), g(g), b(b) {};
 
@@ -28,8 +28,6 @@ public:
 	//pixel_24bit(const pixel_24bit&);
 
 	//pixel_24bit& operator=(const pixel_24bit&);
-
-
 	// gen_hash przelicza kombinajê liczb r, g ,b i generuje pojedyñcz¹ wartoœæ unikaln¹ dla tej kombinacji
 
 	unsigned gen_hash(const unsigned&);

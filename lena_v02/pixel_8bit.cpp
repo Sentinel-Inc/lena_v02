@@ -7,7 +7,7 @@
 //
 //
 
-#include "_8bit_pixel.h"
+#include "pixel_8bit.h"
 
 pixel_8bit::pixel_8bit(unsigned char color)
 {

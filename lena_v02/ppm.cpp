@@ -33,6 +33,13 @@ ppm& ppm::operator=(const ppm& other)
 }
 
 
+
+
+void ppm::set_pixel(size_t x, size_t y, pixel_24bit new_pixel)
+{
+	image[x * this->x + y] = new_pixel;
+}
+
 unsigned char ppm::check_color(int color) {
 	if (color<0 || color>(int) max_color) {
 		throw invalid_file_format_ppm;
@@ -79,7 +86,11 @@ format ppm::read_header(std::fstream& plik) {
 
 
 ppm::ppm(std::string file_path) {
-
+	read_data_from_file(file_path);
+	
+}
+void ppm::read_data_from_file(std::string file_path)
+{
 	std::fstream plik;
 	plik.open(file_path, std::ios::in);
 	if (plik.good()) {
@@ -120,10 +131,10 @@ ppm::ppm(std::string file_path) {
 
 				unsigned char B = check_color(read_number(plik));
 
-				image.push_back({R, G, B});//dodaje pobrany kolor do tablicy
+				image.push_back({ R, G, B });//dodaje pobrany kolor do tablicy
 
 			}
-			
+
 		}
 		else {
 			// nie zaiplementowany format pliku w tym, przypadku p6

@@ -7,7 +7,7 @@
 //
 //
 
-#include "_24bit_pixel.h"
+#include "pixel_24bit.h"
 
 
 unsigned pixel_24bit::gen_hash(const unsigned& max_color) {

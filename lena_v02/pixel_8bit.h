@@ -21,7 +21,7 @@ class pixel_8bit
 
 public:
 
-	pixel_8bit() :color(0) {};
+	pixel_8bit() :color(NULL) {};
 
 	pixel_8bit(unsigned char);
 	pixel_8bit(const pixel_8bit&);
