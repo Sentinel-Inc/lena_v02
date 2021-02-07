@@ -114,6 +114,8 @@ void ppm::read_data_from_file(std::string file_path)
 
 			size_t array_size = y * x; // tymczasowa  zmienna
 
+			if (!image.empty()) image.clear(); // jeżeli obraz posiada już dane 
+							  // należy je nadpisać 
 			image.reserve(array_size);
 
 
@@ -147,4 +149,26 @@ void ppm::read_data_from_file(std::string file_path)
 
 		throw invalid_path_ppm;
 	}
+}
+
+void ppm::save_data_to_file(std::string file_path)
+{
+
+	std::fstream plik;
+	plik.open(file_path, std::ios::out);
+	plik << "P3\n";
+	plik << x << "\n";
+	plik << y << "\n";
+	plik << max_color << "\n";
+
+	plik << "#generated with lena_vo2";
+	for (int i = 0; i < size() / 6; i++) {// wiersze powinny mieć max 60 znaków  
+
+		for (int j = 0; j < 6; j++) {
+			plik << image[i]<<' ';
+		}
+
+		plik << "\n";
+	}
+
 }

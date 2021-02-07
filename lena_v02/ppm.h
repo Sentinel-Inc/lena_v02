@@ -31,6 +31,7 @@ public:
 	
 
 	void read_data_from_file(std::string);
+	void save_data_to_file(std::string);
 	size_t get_x() { return  x; }
 	size_t get_y() { return  y; }
 	size_t size() { return x*y; }
