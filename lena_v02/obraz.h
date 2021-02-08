@@ -1,4 +1,7 @@
-﻿
+﻿// klasa "bazowa" pseudo interfejs dla klas pbm, pgm, ppm
+// ze względu na wymagania zadania obraz nie może być interfejsem
+
+
 #pragma once
 #ifndef OBRAZ_H
 #define OBRAZ_H

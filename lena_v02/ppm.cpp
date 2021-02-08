@@ -162,13 +162,11 @@ void ppm::save_data_to_file(std::string file_path)
 	plik << max_color << "\n";
 
 	plik << "#generated with lena_vo2";
-	for (int i = 0; i < size() / 6; i++) {// wiersze powinny mieć max 60 znaków  
+	for (int i = 0; i < size() ; i++) {
 
-		for (int j = 0; j < 6; j++) {
-			plik << image[i]<<' ';
-		}
+		plik << image[i] << ' ';
 
-		plik << "\n";
+		if (i % 6 == 0)plik << "\n"; // wiersze powinny mieć max 60 zn
 	}
 
 }
