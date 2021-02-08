@@ -157,8 +157,9 @@ void pgm::save_data_to_file(std::string file_path)
 	std::fstream plik;
 	plik.open(file_path, std::ios::out);
 	plik << "P2\n";
-	plik << x << "\n";
 	plik << y << "\n";
+	plik << x << "\n";
+	
 	plik << max_color << "\n";
 	plik << "#generated with lena_vo2";
 	for (int i = 0; i < size(); i++) {
