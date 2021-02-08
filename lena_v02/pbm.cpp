@@ -40,7 +40,7 @@ void pbm::set_pixel(size_t x, size_t y, pixel_8bit new_color)
 }
 
 unsigned char pbm::check_color(int color) {
-	if (color< 0 || color> max_color) {
+	if (color < 0 || color> max_color) {
 		throw invalid_file_format_pbm;
 	}
 	else return (unsigned char)color;

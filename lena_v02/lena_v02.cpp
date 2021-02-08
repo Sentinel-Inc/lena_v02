@@ -2,11 +2,19 @@
 #include <iostream>
 #include "ppm.h"
 #include "pgm.h"
-
+namespace my {
+	size_t pow(unsigned base, unsigned pow) {
+		size_t potega=1;
+		for (unsigned i = 0; i < pow; i++) {
+			potega *= base;
+		}
+		return potega;
+	}
+}
 unsigned liczkolory( obraz& image) {
 
 
-	size_t max_number_of_possible_colors = pow(image.get_max_color() + 1, image.number_of_color_dimentions());
+	size_t max_number_of_possible_colors = my::pow(image.get_max_color() + 1, image.number_of_color_dimentions());
 
 	size_t hash_array_size = (int)max_number_of_possible_colors / 8;
 

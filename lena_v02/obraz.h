@@ -1,7 +1,5 @@
-﻿// klasa "bazowa" pseudo interfejs dla klas pbm, pgm, ppm
-// ze względu na wymagania zadania obraz nie może być interfejsem
-
-
+﻿// obraz klasa interfejs dla dlas pbm, pgm, ppm 
+// nie mozna utwozyc obiektu tej klasy!
 #pragma once
 #ifndef OBRAZ_H
 #define OBRAZ_H
@@ -13,7 +11,7 @@
 
 
 
-static const enum format {
+ const enum format {
 	ascii = 0,
 	binary = 1
 };
@@ -21,22 +19,17 @@ static const enum format {
 class obraz
 {
 public:
-	virtual size_t get_x() { return  x; }
-	virtual size_t get_y() { return  y; }
-	virtual size_t size() { return x*y; }
-	virtual unsigned get_max_color() { return max_color; }
-	virtual unsigned number_of_color_dimentions() { return 0; } 
-	virtual unsigned get_pixel_hash(unsigned position) { return 0; }
+	virtual size_t get_x() = 0;
+	virtual size_t get_y() = 0;
+	virtual size_t size() = 0;
+	virtual unsigned get_max_color() = 0;
+	virtual unsigned number_of_color_dimentions() = 0;
+	virtual unsigned get_pixel_hash(size_t ) = 0;
 
 
 public:
-	obraz():x(NULL),y(NULL),max_color(NULL){};
-	obraz(size_t height,size_t width,unsigned max_color) :x(height), y(width), max_color(max_color) {};
-protected:
+	
 
-	size_t x; // height
-	size_t y; // width
-	unsigned max_color; // max_color veluestored by one pixel 
 
 };
 

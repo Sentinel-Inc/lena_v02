@@ -39,7 +39,7 @@ void pgm::set_pixel(size_t x, size_t y, pixel_8bit new_color)
 	image[x * this->x + y] = new_color;
 }
 
-unsigned char pgm::check_color(int color) {
+unsigned char pgm::check_color(unsigned color) {
 	if (color< 0 || color> max_color) {
 		throw invalid_file_format_pgm;
 	}

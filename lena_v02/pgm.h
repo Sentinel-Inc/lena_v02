@@ -40,13 +40,17 @@ public:
 
 private:
 
-	unsigned char check_color(int);
+	unsigned char check_color(unsigned color);
 	format read_header(std::fstream&);
 
 
 
 protected:
 	std::vector<pixel_8bit> image; // image of a picture 
+
+	size_t x; // height
+	size_t y; // width
+	unsigned max_color; // max_color veluestored by one pixel 
 
 
 };
